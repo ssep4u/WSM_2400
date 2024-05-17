@@ -24,3 +24,42 @@
     /* nav */
     --nav-height: 44px;
 }
+
+/* nav */
+body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+}
+body>header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+nav.container {
+    background-color: var(--primary-color);
+    height: var(--nav-height);
+    display: flex;      /* 기본값: 가로로 배치 */
+    justify-content: space-between;     /* 메인축(가로)으로 양쪽정렬 */
+    align-items: center;                /* 교차축(세로)으로 가운데 정렬 */
+    padding: 0 40px;                    /* 왼/오른만 양쪽 여백 */
+    color: #fff;
+    font-size: var(--h2-font-size);     /* 웹폰트 아이콘, 글자 크게 */
+}
+nav a {
+    color: #fff;
+}
+
+.nav-logo {
+    margin-top: 5px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;       /* 열 사이의 간격 */
+}
+
+.nav-toggle {
+    display: none;      /* 사라져 */
+}

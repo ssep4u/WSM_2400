@@ -63,3 +63,34 @@ nav a {
 .nav-toggle {
     display: none;      /* 사라져 */
 }
+
+
+/* mobile */
+@media screen and (max-width: 600px) {  /* 600px 이하 일 때 스타일 */
+    nav.container {
+        padding: 0 20px;    /* 왼/오른 여백 조금 줄이자 */
+    }
+
+    .nav-list {
+        flex-direction: column; /* 세로로 배치 */
+        background-color: hsla(200, 100%, 25%, 0.6);
+        position: absolute;
+        bottom: var(--nav-height);
+        right: 0;
+        left: 0;
+    }
+    .nav-item {
+        padding: 0.5rem 0;  /* 메뉴 아이템 세로 간격 벌리자 */
+        border-bottom: 1px solid white;
+        width: 100%;        /* 가로 너비 100% */
+        text-align: center; /* 글자 가운데 */
+    }
+    .nav-link {
+        display: block;     /* 링크의 너비: 콘텐츠 -> 100%로 늘리자 */
+    }
+
+
+    .nav-toggle {
+        display: block;     /* 햄버거 메뉴 보여라 */
+    }
+}

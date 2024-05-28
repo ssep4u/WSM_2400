@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/school-food.css">
 </head>
 <body>
     <header>
@@ -35,5 +36,48 @@
         <!-- nav.nav.container{네비게이션 바} -->
 
     </header>
+
+    <main id="school-food" class="container">
+        <section class="button-container">
+            <button class="btn prev-date" onclick="changeDate(-1)">
+                <i class="bi bi-chevron-compact-left"></i>
+            </button>
+            <header class="school-food-title">🍚 화요일의 메뉴 🍚</header>
+            <button class="btn next-date" onclick="changeDate(1)">
+                <i class="bi bi-chevron-compact-right"></i>
+            </button>
+        </section>
+        <section class="menu-container">
+            <article class="school-food-menu">
+                
+                <h2 class="title">조식</h2>
+                <ul class="menu breakfast">
+                    <li class="menu-food">흰쌀밥</li>
+                    <li class="menu-food">육개장</li>
+                    <li class="menu-food">오리주물럭</li>
+                    <li class="menu-food">부추겉절이</li>
+                    <li class="menu-food">깍두기</li>
+                </ul>
+            </article>
+            <article class="school-food-menu">
+                <h2 class="title">중식</h2>
+                <ul class="menu lunch">
+                    <li class="menu-food">흰쌀밥</li>
+                    <li class="menu-food">육개장</li>
+                    <li class="menu-food">오리주물럭</li>
+                    <li class="menu-food">부추겉절이</li>
+                    <li class="menu-food">깍두기</li>
+                </ul>
+            </article>
+            <article class="school-food-menu">
+                <h2 class="title">석식</h2>
+                <ul class="menu dinner">
+                    <li class="menu-food"></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script src="js/nav.js"></script>
+    <script src="js/school-food.js"></script>
 </body>
 </html>

@@ -1,0 +1,89 @@
+#school-food{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: calc(var(--nav-height) + 100px);
+}
+
+.button-container{
+    display: flex;
+    align-items: flex-end;
+    column-gap: 20px;
+    font-size: var(--h1-font-size);
+    margin-bottom: 40px;
+}
+
+.prev-date,
+.next-date {
+    font-size: var(--h1-font-size);
+    background-color: transparent;  /*배경색을 투명으로 설정*/ 
+    border: none;
+    cursor: pointer;
+}
+
+.menu-container {
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 80px;
+    row-gap: 40px;
+}
+
+.school-food-menu {
+    max-width: 300px;
+    padding: 20px;
+    flex: 1 0 200px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.school-food-menu>.title {
+    margin-bottom: 20px;
+    font-size: var(--h1-font-size);
+    text-align: center;
+}
+
+.school-food-menu>.menu {
+    font-size: var(--h2-font-size);
+    text-align: center;
+}
+
+/*tablet*/
+@media screen and (max-width:600px){
+    #school-food {
+        margin-top: calc(var(--nav-height) + 30px);
+    }
+
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .school-food-menu {
+        min-width: 100%;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 300px;
+        margin: 0 auto; /* 고정 너비(최대 너비) 설정 후 작동, menu 요소의 최대 너비와 동일하거나
+        더 작아야 합니다. 중앙 정렬을 효과 보이지 않을 수 있음.*/
+    }
+
+    .menu-food:nth-child(odd) {
+        text-align: left;
+    }
+    
+    .menu-food:nth-child(even) {
+        text-align: right;
+    }
+
+    .menu-food {
+        width: 50%;
+    }
+}

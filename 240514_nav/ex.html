@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click 예제</title>
+</head>
+<body>
+    <button id="btn">눌러줘.</button>
+    <script>
+        const displayClicked = () => {
+            console.log("눌렸음");
+        }
+        
+        document.getElementById("btn").onclick = displayClicked;
+    </script>
+</body>
+</html>

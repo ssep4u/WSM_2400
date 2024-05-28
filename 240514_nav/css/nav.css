@@ -58,6 +58,7 @@ nav a {
     display: flex;
     align-items: center;
     column-gap: 40px;       /* 열 사이의 간격 */
+    transition: 0.4s ease-in-out;       /* 애니메이션 */
 }
 
 .nav-toggle {
@@ -75,9 +76,10 @@ nav a {
         flex-direction: column; /* 세로로 배치 */
         background-color: hsla(200, 100%, 25%, 0.6);
         position: absolute;
-        bottom: var(--nav-height);
+        top: calc(var(--nav-height) - 140px); /* 실제 위치는 44px - 140px. !주의 연산자 양 옆 띄어쓰기 꼭 해야 함*/
         right: 0;
         left: 0;
+        z-index: -1;        /* nav 뒤에 숨기자 */
     }
     .nav-item {
         padding: 0.5rem 0;  /* 메뉴 아이템 세로 간격 벌리자 */
@@ -92,5 +94,10 @@ nav a {
 
     .nav-toggle {
         display: block;     /* 햄버거 메뉴 보여라 */
+        cursor: pointer;    /* 마우스 포인터 손으로 바꾸자 */
+    }
+
+    .show-menu {
+        top: var(--nav-height);     /* nav-list 아래로 내리자 */
     }
 }

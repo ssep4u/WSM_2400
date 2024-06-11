@@ -1,0 +1,62 @@
+[
+    {
+        "name": "꼬북칩",
+        "price": 1000,
+        "category": "과자류",
+        "image": "꼬북칩.webp"
+    },
+    {
+        "name": "더블치즈후레쉬팡",
+        "price": 1200,
+        "category": "빵류",
+        "image": "더블치즈후레쉬팡.png"
+    },
+    {
+        "name": "몽쉘",
+        "price": 5200,
+        "category": "빵류",
+        "image": "몽쉘.webp"
+    },
+    {
+        "name": "무뚝뚝",
+        "price": 2000,
+        "category": "과자류",
+        "image": "무뚝뚝.webp"
+    },
+    {
+        "name": "빠삐코",
+        "price": 700,
+        "category": "빙과류",
+        "image": "빠삐코.webp"
+    },
+    {
+        "name": "설레임",
+        "price": 1500,
+        "category": "빙과류",
+        "image": "설레임.jpg"
+    },
+    {
+        "name": "소금빵",
+        "price": 1100,
+        "category": "빵류",
+        "image": "소금빵.jpg"
+    },
+    {
+        "name": "요맘때",
+        "price": 1500,
+        "category": "빙과류",
+        "image": "요맘때.jpg"
+    },
+    {
+        "name": "월드콘",
+        "price": 1500,
+        "category": "빙과류",
+        "image": "월드콘.png"
+    },
+    {
+        "name": "허니버터칩",
+        "price": 900,
+        "category": "과자류",
+        "image": "허니버터칩.webp"
+    }
+]

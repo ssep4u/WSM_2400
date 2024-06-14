@@ -32,9 +32,52 @@
     margin-top: 4px;
 }
 
+.product-container {
+    margin: 0 100px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ededed;
+    padding: 30px;
+    border-radius: 40px;
+    position: relative; /* 내 자손 중 postion: absolute;인 아이의 기준이 화면 전체가 아니라 내가 된다 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.product-image {
+    /* width: 200px; */
+    height: 200px;
+    aspect-ratio: 1/1; /* 이미지 너비(앞)/이미지 높이(뒤) 비율 */
+    object-fit: contain;  /* cover: 공간에 맞게 확대, 짤림; contain: 공간에 맞게 축소, 여백 생김 */
+    border-radius: 10px;
+    background-color: white;
+}
+.product-name {
+    background-color: #dcdcdc;
+    padding: 4px 30px;
+    font-size: var(--h2-font-size);
+    border-radius: 19px;
+    position: absolute;
+    bottom: -19px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /*tablet*/
 @media screen and (max-width:976px) {
     #school-market {
         margin-top: calc(var(--nav-height) + 30px);
+    }
+}
+
+/* mobile */
+@media screen and (max-width:800px) {
+    .product-container {
+        justify-content: center;
     }
 }

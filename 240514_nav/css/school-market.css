@@ -1,0 +1,40 @@
+#school-market {
+    margin-top: calc(var(--nav-height) + 100px);
+}
+
+#school-market {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search-container {
+    background-color: #dcdcdc;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 28px;
+    min-width: 500px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#search-bar {
+    font-size: var(--h2-font-size);
+    background: none;   /* 입력창 배경 사라져 */
+    border: none;       /* 입력창 외곽선 사라져 */
+    flex-grow: 1;       /* 나를 감싼 container에 여유공간 생기면, 나를 늘려라 */
+}
+#search-bar:focus {
+    outline: none;      /* 입력창 focus 시, 외곽선 사라져 */
+}
+.search-container > i {
+    font-size: var(--h2-font-size);
+    margin-top: 4px;
+}
+
+/*tablet*/
+@media screen and (max-width:976px) {
+    #school-market {
+        margin-top: calc(var(--nav-height) + 30px);
+    }
+}

@@ -1,3 +1,5 @@
+let allData;
+
 const showData = (data) => {
     //data 하나씩 뽑아서 <article> -> .product-container 의 자식으로 넣자 <- HTML
     const productContainerSection = document.getElementsByClassName("product-container")[0];
@@ -14,6 +16,7 @@ const showData = (data) => {
 }
 
 const setData = (data) => {
+    allData = data;
     showData(data);
 
     // data = [{'이름':'아이유'},{'이름': '안유진'}, {'이름': '변우석'}]
@@ -37,3 +40,9 @@ const getData = (() => {
     .catch((error) => console.log(error));
 });
 getData();
+
+const searchData = (query) => {
+    //data 하나씩 꺼내어, name이랑 query 비교해서 있으면, 모아놓자
+    let searchData = allData.filter((oneData) => oneData["name"].includes(query));
+    showData(searchData);
+}

@@ -3,13 +3,13 @@
         "name": "꼬북칩",
         "price": 1000,
         "category": "과자류",
-        "image": "꼬북칩.webp"
+        "image": "꼬북칩.webp"
     },
     {
         "name": "더블치즈후레쉬팡",
         "price": 1200,
         "category": "빵류",
-        "image": "더블치즈후레쉬팡.png"
+        "image": "더블치즈후레쉬팡.png"
     },
     {
         "name": "몽쉘",

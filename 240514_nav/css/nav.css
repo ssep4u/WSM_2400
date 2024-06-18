@@ -35,6 +35,7 @@ body>header {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 10;
 }
 nav.container {
     background-color: var(--primary-color);
@@ -80,6 +81,7 @@ nav a {
         right: 0;
         left: 0;
         z-index: -1;        /* nav 뒤에 숨기자 */
+        backdrop-filter: blur(4px);     /* 배경 흐리게 */
     }
     .nav-item {
         padding: 0.5rem 0;  /* 메뉴 아이템 세로 간격 벌리자 */
@@ -95,6 +97,7 @@ nav a {
     .nav-toggle {
         display: block;     /* 햄버거 메뉴 보여라 */
         cursor: pointer;    /* 마우스 포인터 손으로 바꾸자 */
+        margin-top: 6px;
     }
 
     .show-menu {

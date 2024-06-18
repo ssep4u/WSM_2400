@@ -31,7 +31,7 @@ body {
     background-color: var(--body-color);
 }
 body>header {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;

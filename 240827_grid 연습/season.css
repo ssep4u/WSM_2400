@@ -1,0 +1,28 @@
+.container {
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 30% 70%; /* repeat(2, 50%); */   /* repeat(2, 1fr); */ /* 1fr 1fr; */ 
+    grid-template-rows: 4fr 6fr;
+}
+.item {
+    /* border: 1px solid hotpink; */
+    /* text-align: center; 수평만 가운데로 */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    place-items: center;
+}
+.item:first-child {
+    background-color: springgreen;
+}
+.item:nth-child(2) {
+    background-color: deepskyblue;
+}
+.item:nth-child(3) {
+    background-color: peru;
+}
+.item:last-child {
+    background-color: whitesmoke;
+}

@@ -1,6 +1,57 @@
 .container {
     width: 600px;
-    height: 800px;
+    height: 400px;
     display: grid;
-    
+    grid-template-columns: 100px repeat(5, 1fr);    /* 1fr 1fr 1fr 1fr 1fr; */
+}
+.item {
+    border: 1px solid gray;
+    display: grid;              /* 글자 수평/수직 가운데로 */
+    place-items: center;        /* 글자 수평/수직 가운데로 */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.week_name {
+    background-color: hotpink;
+    color: white;
+}
+/* .item:nth-child(6n+1) {
+    color: hotpink;
+} */
+.two {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 3;
+}
+.wsm {
+    grid-row-start: span 2;
+    grid-row-end: 9;
+    grid-column-start: 3;
+}
+.java {
+    grid-row-start: 3;
+    grid-row-end: span 2;
+    grid-column-start: 4;
+}
+.item:nth-child(1) {
+    color: white;
+}
+.club_activity {
+    grid-area: 7 / 4 / span 2 / 5;
+}
+.coding {
+    grid-area: 4 / 5 / 6 / 6;
+}
+.python {
+    grid-area: 6 / 5 / span 2 / 6;
+}
+.wsmtwo {
+    grid-area: 4 / 6 / span 2 / 7;
+}
+.choice {
+    grid-area: 6 / 6 / span 2 / 7;
+}
+.class {
+    color: hotpink;
 }

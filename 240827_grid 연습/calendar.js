@@ -11,7 +11,7 @@ const setCalendarHeader = (date) => {
     //달 구하자
     const month = date.getMonth();  //0: 1월, 1: 2월
 
-    titleString = `${year}년 ${month + 1}월`;
+    titleString = `<i>${year}년 ${month + 1}월</i>`;
     const calendarHeaderH1 = document.querySelector("#calendar-header h1");
     calendarHeaderH1.innerHTML = titleString;
 }
@@ -29,10 +29,13 @@ prevMonthButton.addEventListener("click", () => changeMonth(-1));    //.addEvent
 const nextMonthButton = document.querySelector("#next-month");
 nextMonthButton.onclick = () => changeMonth(1);
 
-//일 구하자
+//달력 표시하자(요일, 날짜)
 const setCalendar = (date) => {
     const year = date.getFullYear();
     const month = date.getMonth();
+
+    //이전 달 마지막 날짜 구하자: 이번 달 첫날 - 1
+    const prevMonthLastDate = new Date(year, month, 0);
 
     //첫 날의 요일 구하자: 이전달 뒷 날짜 쓰기 위하여
     const firstDay = new Date(year, month, 1).getDay(); //0: 일, 6: 토
@@ -64,7 +67,13 @@ const setCalendar = (date) => {
     calendarContainerDiv.innerHTML = weekNameString;
 
     //이전 달 뒷날짜 구하자
-    //0~이번달 1일의 요일-1까지 이전달 마지막 날짜 - 이번달 1일의 요일 + 1(시작날짜)부터 +1해서 쓰자
+    //?~이전 달 마지막 날짜  ?: 이전 달 마지막 날짜 - 이번 달 첫날의 요일 + 1
+    for (let date = (prevMonthLastDate.getDate() - firstDay + 1); date <= prevMonthLastDate.getDate(); date++) {
+        let currentMonthDateDiv = document.createElement("div");    //<div></div>
+        currentMonthDateDiv.className = "item other-month";         //<div class="item other-month"></div>
+        currentMonthDateDiv.textContent = date;                     //<div class="item other-month">1</div>
+        calendarContainerDiv.appendChild(currentMonthDateDiv);      //<div id="calendar-container"><div class="item other-month">1</div></div>
+    }
 
     //이번달 날짜들 쓰자: 1~30: 1~lastDate.getDate()
     // let dateString = "";
@@ -81,9 +90,14 @@ const setCalendar = (date) => {
         calendarContainerDiv.appendChild(currentMonthDateDiv);      //<div id="calendar-container"><div class="item">1</div></div>
     }
 
-    
     //다음 달 앞날짜 구하자 
-    //이번달 마지막 날의 요일+1~6까지 1부터 차례대로 날짜 쓰자
+    //1~?  ?: 6-이번 달 마지막 날짜의 요일
+    for (let date = 1; date <= (6 - lastDay); date++) {
+        let currentMonthDateDiv = document.createElement("div");    //<div></div>
+        currentMonthDateDiv.className = "item other-month";         //<div class="item other-month"></div>
+        currentMonthDateDiv.textContent = date;                     //<div class="item other-month">1</div>
+        calendarContainerDiv.appendChild(currentMonthDateDiv);      //<div id="calendar-container"><div class="item other-month">1</div></div>
+    }
 }
 
 

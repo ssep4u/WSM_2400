@@ -1,3 +1,37 @@
 main {
     margin-top: calc(var(--nav-height) + 40px); /* calc()는 연산자 꼭 띄어 */
 }
+
+#dormitory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#dormitory > h1 {
+    margin-bottom: 40px;
+}
+#dormitory #selection-container {
+    font-size: var(--h2-font-size);
+    display: flex;
+    background-color: #a0d49c;
+    border-radius: 40px;
+    padding: 5px 10px;
+    column-gap: 30px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 25%);
+}
+.selection-item {
+    padding: 5px 15px;
+}
+.select-menu,
+.selection-item:hover {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 25%);
+}
+#calendar {
+    margin-top: 20px;
+    /* width: 100%;
+    max-width: 600px; */
+    width: min(100%, 600px);   /* 600px 보다 크면, 600px, 작으면 100% */
+}

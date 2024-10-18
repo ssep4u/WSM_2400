@@ -1,0 +1,48 @@
+
+#calendar {
+    width: 600px;
+    margin: 0 auto; 
+}
+#calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+#prev-month,
+#next-month {
+    border: none;
+    background-color: transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+#calendar-container {
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 1.4px solid #555;
+}
+.item {
+    display: grid;
+    place-items: center;
+}
+/* 이번달만 손가락 하고 싶어. .item이면서 .other-date가 없는 애야 */
+.item:not(.other-date) {
+    cursor: pointer;
+}
+.week-name {
+    color: #aaa;
+    font-weight: bold;
+    border-bottom: 1.4px solid #555;
+}
+.item:nth-child(7n+1) {
+    color: crimson;
+}
+.item:nth-child(7n+7) {
+    color:cornflowerblue;
+}
+
+
+.other-month {
+    color: #ddd !important;
+}

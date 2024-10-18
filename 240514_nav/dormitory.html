@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/school-market.css">
+    <link rel="stylesheet" href="css/dormitory.css">
+    <link rel="stylesheet" href="css/calendar.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
+
 <body>
     <header>
         <nav class="nav container">
@@ -38,36 +41,43 @@
 
     </header>
 
-    <main id="school-market" class="container">
-        <section class="search-container">
-            <input type="text" name="query" id="search-bar" oninput="searchData(this.value)">
-            <i class="bi bi-search"></i>
-        </section>
-        <section class="product-container">
-            <article class="product-item">
-                <img src="images/설레임.jpg" alt="" class="product-image">
-                <div class="product-name">설레임</div>
-            </article>
-            <article class="product-item">
-                <img src="images/빠삐코.webp" alt="" class="product-image">
-                <div class="product-name">빠삐코</div>
-            </article>
-            <article class="product-item">
-                <img src="images/소금빵.jpg" alt="" class="product-image">
-                <div class="product-name">소금빵</div>
-            </article>
-            <article class="product-item">
-                <img src="images/허니버터칩.webp" alt="" class="product-image">
-                <div class="product-name">허니버터칩</div>
-            </article>
-            <article class="product-item">
-                <img src="images/몽쉘.webp" alt="" class="product-image">
-                <div class="product-name">몽쉘</div>
-            </article>
-        </section>
+    <main id="dormitory">
+        <h1>세탁기 예약하기</h1>
+
+        <!-- #selection-container>.selection-item*3 -->
+        <div id="selection-container">
+            <div class="selection-item">요일 지정</div>
+            <div class="selection-item">시간 선택</div>
+            <div class="selection-item">호실 이름</div>
+        </div>
+
+        <!-- 요일 지정 -->
+        <div id="calendar">
+            <div id="calendar-header">
+                <button id="prev-month">🌜</button>
+                <h1></h1>
+                <button id="next-month">🌛</button>
+            </div>
+            <div id="calendar-container">
+            </div>
+        </div>
+
+        <!-- 시간 선택 -->
+        <div id="selection-washingmachine-time">
+
+        </div>
+
+        <!-- 호실 이름 -->
+        <div id="selection-room-name">
+
+        </div>
     </main>
 
+
+
     <script src="js/nav.js"></script>
-    <script src="js/school-market.js"></script>
+    <script src="js/dormitory.js"></script>
+    <script src="js/calendar.js"></script>
 </body>
+
 </html>

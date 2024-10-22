@@ -64,7 +64,21 @@
 
         <!-- 시간 선택 -->
         <div id="selection-washingmachine-time">
+            <div class="flex-container">
+                <select name="washingmachine" id="washingmachine">
+                    <!-- option[value="$"]{$번 세탁기}*3 -->
+                    <option value="1">1번 세탁기</option>
+                    <option value="2">2번 세탁기</option>
+                    <option value="3">3번 세탁기</option>
+                </select>
+                <select name="time" id="time">
+                    <option value="1">7시 ~ 8시 10분</option>
+                    <option value="2">8시 10분 ~ 9시 20분</option>
+                    <option value="3">9시 20분 ~ 10시 30분</option>
+                </select>
+            </div>
 
+            <button class="btn">다음</button>
         </div>
 
         <!-- 호실 이름 -->

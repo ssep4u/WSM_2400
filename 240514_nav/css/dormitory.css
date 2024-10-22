@@ -35,17 +35,20 @@ main {
     max-width: 600px; */
     width: min(100%, 600px);   /* 600px 보다 크면, 600px, 작으면 100% */
 }
-#calendar {
+#calendar,
+#selection-washingmachine-time {
     display: none;
 }
-#selection-washingmachine-time {
+#selection-washingmachine-time,
+#selection-room-name {
     margin-top: 100px;
 }
 .flex-container {
     display: flex;
     column-gap: 20px;
 }
-#dormitory select {
+#dormitory select,
+#dormitory input {
     font-size: var(--h2-font-size);
     border: none;
     background-color: #f0f0f0;

@@ -37,7 +37,8 @@ main {
 }
 #calendar,
 #selection-washingmachine-time,
-#selection-room-name {
+#selection-room-name,
+#board {
     display: none;
 }
 #selection-washingmachine-time,

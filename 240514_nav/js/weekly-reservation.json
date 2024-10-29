@@ -1,0 +1,68 @@
+[
+    {
+        "weekday": 1,
+        "room": "401",
+        "washingmachine": 1,
+        "time": 1
+    },
+    {
+        "weekday": 1,
+        "room": "501",
+        "washingmachine": 2,
+        "time": 1
+    },
+    {
+        "weekday": 1,
+        "room": "502",
+        "washingmachine": 3,
+        "time": 3
+    },
+    {
+        "weekday": 1,
+        "room": "402",
+        "washingmachine": 2,
+        "time": 3
+    },
+    {
+        "weekday": 1,
+        "room": "405",
+        "washingmachine": 2,
+        "time": 2
+    },
+    {
+        "weekday": 2,
+        "room": "403",
+        "washingmachine": 3,
+        "time": 2
+    },
+    {
+        "weekday": 3,
+        "room": "404",
+        "washingmachine": 1,
+        "time": 1
+    },
+    {
+        "weekday": 3,
+        "room": "405",
+        "washingmachine": 2,
+        "time": 3
+    },
+    {
+        "weekday": 4,
+        "room": "501",
+        "washingmachine": 3,
+        "time": 2
+    },
+    {
+        "weekday": 5,
+        "room": "502",
+        "washingmachine": 1,
+        "time": 1
+    },
+    {
+        "weekday": 5,
+        "room": "503",
+        "washingmachine": 2,
+        "time": 3
+    }
+]

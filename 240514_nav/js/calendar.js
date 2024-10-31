@@ -86,6 +86,8 @@ const setCalendar = (date) => {
     for (let date = 1; date <= lastDate.getDate(); date++) {
         let currentMonthDateDiv = document.createElement("div");    //<div></div>
         currentMonthDateDiv.className = "item";                     //<div class="item"></div>
+        currentMonthDateDiv.onclick = (event) => clickDate(event);   //<div class="item" onclick="clickDate"></div>
+        currentMonthDateDiv.dataset.date = `${year}-${month+1}-${date}`;    //<div class="item" onclick="clickDate" data-date="년-월-일"></div>
         currentMonthDateDiv.textContent = date;                     //<div class="item">1</div>
         calendarContainerDiv.appendChild(currentMonthDateDiv);      //<div id="calendar-container"><div class="item">1</div></div>
     }
